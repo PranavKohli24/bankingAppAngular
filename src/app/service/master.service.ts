@@ -10,7 +10,7 @@ export class MasterService {
 
   constructor(private http:HttpClient) { }
 
-  addNewApplication(obj:Application){
-    return this.http.post("https://projectapi.gerasim.in/api/BankLoan/AddNewApplication",obj)
+  addNewApplication(obj:Application):Observable<ApiResponseModel>{
+    return this.http.post<ApiResponseModel>("https://projectapi.gerasim.in/api/BankLoan/AddNewApplication",obj)
   }
 }

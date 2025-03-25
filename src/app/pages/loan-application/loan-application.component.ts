@@ -27,7 +27,7 @@ export class LoanApplicationComponent {
 
   
   onSubmit(){
-    this.masterSrv.addNewApplication(this.application).subscribe((res:any)=>{
+    this.masterSrv.addNewApplication(this.application).subscribe((res:ApiResponseModel)=>{
       if(res.result){
         alert('loan application success')
       }else{
